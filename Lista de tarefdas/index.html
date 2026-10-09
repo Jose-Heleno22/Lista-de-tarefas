@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div>
+        <span class="subtitle">ORGANIZE SUA ROTINA</span>
+        <h1>Minhas tarefas<span>.</span></h1>
+        <p>Pequenos passos, grandes conquistas.</p>
+      </div>
+      <div class="header-icon">✓</div>
+    </header>
+
+    <section class="progress-card">
+      <div class="progress-info">
+        <span>Seu progresso</span>
+        <strong id="progress-text">0%</strong>
+      </div>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+      <p id="progress-detail">0 de 0 tarefas concluídas</p>
+    </section>
+
+    <form id="task-form">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="O que você precisa fazer?"
+        maxlength="200"
+        autocomplete="off"
+        required
+      >
+      <button type="submit" class="add-btn">+ Adicionar</button>
+    </form>
+
+    <nav class="filters" aria-label="Filtrar tarefas">
+      <button class="filter active" data-filter="all">Todas</button>
+      <button class="filter" data-filter="pending">Pendentes</button>
+      <button class="filter" data-filter="done">Concluídas</button>
+    </nav>
+
+    <section>
+      <div class="list-header">
+        <h2 id="list-title">Todas as tarefas</h2>
+        <span id="task-count">0 tarefas</span>
+      </div>
+      <ul id="task-list" aria-live="polite"></ul>
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">📝</div>
+        <h3>Nenhuma tarefa por aqui</h3>
+        <p>Adicione uma tarefa para começar!</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>Feito para você produzir mais.</span>
+      <button id="clear-done" class="clear-btn">
+        Limpar concluídas
+      </button>
+    </footer>
+  </main>
+</body>
+</html>
